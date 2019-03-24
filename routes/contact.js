@@ -30,7 +30,7 @@ router.post('/', [multer.array(), recaptcha.middleware.verify], (req, res) => {
   const mailOptions = {
     from: '"'+ req.body.name +'" <'+ req.body.email +'>', // sender address
     to: destinationAddress, // list of receivers
-    subject: 'Contact form HCPP18 - ' + req.body.subject, // Subject line
+    subject: 'Contact form HCPP19 - ' + req.body.subject, // Subject line
     text: 'Name: ' + req.body.name + '\n'
       + 'Company: ' + req.body.company + '\n'
       + 'E-mail: ' + req.body.email + '\n'

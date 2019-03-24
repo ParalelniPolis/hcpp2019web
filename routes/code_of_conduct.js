@@ -4,7 +4,7 @@ const router = express.Router();
 /* GET page. */
 
 const pageTitle = 'Code of Conduct';
-const hashTitle = '#HCPP18';
+const hashTitle = '#HCPP19';
 const pageDescription = 'Hackers Congress Paralelní Polis is one of the premier events for hackers, artists, activists, libertarians, and cryptoenthusiasts in Europe.';
 
 router.get('/', (req, res) => {

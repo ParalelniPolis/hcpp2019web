@@ -31,7 +31,7 @@ const app = express();
 const env = process.env.NODE_ENV || 'development';
 app.locals.ENV = env;
 app.locals.ENV_DEVELOPMENT = env === 'development';
-app.locals.APP_NAME = 'Hackers Congress Paralelní Polis 2018';
+app.locals.APP_NAME = 'Hackers Congress Paralelní Polis 2019';
 app.locals.GMAP_KEY = process.env.GMAP_KEY;
 
 const sessionSecret = process.env.SESSION_SECRET;

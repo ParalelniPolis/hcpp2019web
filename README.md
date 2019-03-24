@@ -1,4 +1,4 @@
-# HCPP 2018 website
+# HCPP 2019 website
 [![CircleCI](https://circleci.com/gh/ParalelniPolis/hcpp2017web.svg?style=svg)](https://circleci.com/gh/ParalelniPolis/hcpp2017web)
 
 ### Requirements:

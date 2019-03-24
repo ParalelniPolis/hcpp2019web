@@ -5,7 +5,7 @@ const moment = require('moment-timezone');
 
 /* GET home page. */
 
-const hashTitle = '#HCPP18';
+const hashTitle = '#HCPP19';
 const pageDescription = 'Hackers Congress Paralelní Polis is one of the premier events for hackers, artists, activists, libertarians, and cryptoenthusiasts in Europe.';
 const includeHeader = true;
 

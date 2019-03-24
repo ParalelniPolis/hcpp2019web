@@ -11,7 +11,7 @@ router.post('/', multer.array(), function(req, res) {
     merge_vars: {
         groupings: [{
             name: 'Event',
-            groups: ['HCPP18']
+            groups: ['HCPP19']
         }]
     },
     update_existing: true,

@@ -7,7 +7,7 @@ const fetch = require('node-fetch');
 /* GET page. */
 
 const pageTitle = 'Schedule';
-const hashTitle = '#HCPP18';
+const hashTitle = '#HCPP19';
 const pageDescription = 'Hackers Congress Paralelní Polis is one of the premier events for hackers, artists, activists, libertarians, and cryptoenthusiasts in Europe.';
 
 const formatApiData = (talks) => {
@@ -61,9 +61,9 @@ router.get('/', async (req, res) => {
       title: pageTitle,
       title_hash: hashTitle,
       description: pageDescription,
-      day1: schedule['05-10-2018'],
-      day2: schedule['06-10-2018'],
-      day3: schedule['07-10-2018']
+      day1: schedule['04-10-2019'],
+      day2: schedule['05-10-2019'],
+      day3: schedule['06-10-2019']
     });
   }
   catch (error) {
