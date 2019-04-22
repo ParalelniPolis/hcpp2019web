@@ -36,7 +36,7 @@ Contents
 *********/
 
 :root {
-    --mainColor: #ff0000;
+    --mainColor: #ff6c45;
 }
 header#fullwidth .decentralization {
     display: inline-block;
@@ -1590,7 +1590,7 @@ header#hero .header-text {
 /* Fullwidth Header */
 
 header#fullwidth {
-    background-position: center 60px;
+    background-position: center 50px;
     background-repeat: no-repeat;
     background-size: 100%;
 }
