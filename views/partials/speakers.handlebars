@@ -11,66 +11,68 @@
     </div>
     <!-- /.Title & Subtitle -->
 
-    {{#each speakerRows}}
     <div class="row">
-      {{#each .}}
       <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
         <!-- Speaker -->
         <div class="speaker-item">
-          <a href="javascript:void(0)" data-toggle="modal" {{#if longDescription}}data-target="#speaker_{{slugify displayName}}"{{/if}}>
-            <figure class="speaker accent-bg"> <img src="/media/images/transparent.png" data-lazy="{{photo.url}}" width="300" height="300" alt="{{displayName}}" class="img-responsive center-block" />
-              {{#withFirst talks}}
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_nick-middleton">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/nick-middleton.jpg" width="300" height="300" alt="Nick Middleton" class="img-responsive center-block">
               <figcaption>
-                <p class="text-uppercase accent">{{name}}</p>
+                <p class="text-uppercase accent">An Atlas of Countries that Don’t Exist (Livestream)</p>
               </figcaption>
-              {{/withFirst}}
-              {{#isEmpty talks}}
-                <figcaption>
-                  <p class="text-uppercase accent">{{#if longDescription}}More info{{else}}Coming soon{{/if}}</p>
-                </figcaption>
-              {{/isEmpty}}
             </figure>
           </a>
-          <p><span class="speaker-accent">{{displayName}}</span>
-            <br/> {{shortDescription}}</p>
+          <p><span class="speaker-accent">Nick Middleton</span>
+            <br> Geographer, writer, educator</p>
         </div>
         <!-- /.Speaker -->
       </div>
 
       <!-- Modal -->
-      <div class="modal fade" id="speaker_{{slugify displayName}}" tabindex="-1" role="dialog">
+      <div class="modal fade" id="speaker_nick-middleton" tabindex="-1" role="dialog" style="display: none;">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h2 class="modal-title" id="{{displayName}}">{{displayName}}</h2>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Nick Middleton">Nick Middleton</h2>
             </div>
             <div class="modal-body clearfix">
               <div class="row">
                 <div class="col-xs-12 col-sm-3">
-                  <img src="/media/images/transparent.png" data-lazy="{{photo.url}}" width="200" height="200" alt="{{displayName}}" class="img-responsive" />
+                  <img src="/media/speakers/nick-middleton.jpg" width="200" height="200" alt="Nick Middleton" class="img-responsive">
                 </div>
                 <div class="col-xs-12 col-sm-9">
                   <p>
-                    {{{breaklines longDescription}}}
+                    Nick works, teaches and communicates on a wide variety of geographical issues for a broad range of audiences, from policy-makers to five-year-old children. He also teaches at Oxford University where he is a Fellow of St Anne’s College. His most recent book, An Atlas of Countries that Don’t Exist, has been translated into six languages. Read more at www.nickmiddleton.net.
                   </p>
                 </div>
               </div>
               <hr>
               <div class="row">
                 <div class="col-sm-12">
-                  {{#forEach talks}}
-                    <h4>{{name}}</h4>
+                    <h4>An Atlas of Countries that Don’t Exist (Livestream)</h4>
                     <div class="mrgn-10-btm">
-                      <span class="label label-main">{{#if starts}}{{moment starts "dddd HH:mm"}} - {{/if}}{{room.name}}</span>
+                      <span class="label label-main">Saturday 19:00 - Slévárna</span>
                     </div>
                     <p>
-                      {{description}}
+                      Most of us think we know what a country is, but in truth the concept is notoriously slippery. This talk starts with the familiar political map of the world to show what the bold colours and clear boundaries conceal rather than reveal: a multitude of unrecognised and unnoticed states whose claims to legitimacy are deliberately made invisible. This is the shadowy, surprisingly large, and literally unofficial world of countries that don’t exist.
+
+Based on his best-selling book of the same title, acclaimed travel writer and Oxford geography don, Nick Middleton, takes us on an eye-opening journey through this parallel world. These are wannabe countries that, lacking diplomatic recognition or UN membership, inhabit a realm of shifting borders, idealistic leaders and forgotten peoples. But although the places covered in this talk lie beyond the margins of legitimacy, virtually all can be visited in the real world.
+
+Filled with stories, facts and figures, this is simultaneously an insight into the power of territorial countries, an introduction to creating your own nation state, and a bucket list of destinations from an alternative dimension. Above all, it’s an assortment of yearning tales of nationhood, most led by visionary leaders: some sad, some mad, some downright bizarre.
                     </p>
-                    {{#unless isLast}}
                       <hr>
-                    {{/unless}}
-                  {{/forEach}}
+                    <h4>An Atlas of Countries that Don’t Exist</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 19:00 - Studio 1</span>
+                    </div>
+                    <p>
+                      Most of us think we know what a country is, but in truth the concept is notoriously slippery. This talk starts with the familiar political map of the world to show what the bold colours and clear boundaries conceal rather than reveal: a multitude of unrecognised and unnoticed states whose claims to legitimacy are deliberately made invisible. This is the shadowy, surprisingly large, and literally unofficial world of countries that don’t exist.
+
+Based on his best-selling book of the same title, acclaimed travel writer and Oxford geography don, Nick Middleton, takes us on an eye-opening journey through this parallel world. These are wannabe countries that, lacking diplomatic recognition or UN membership, inhabit a realm of shifting borders, idealistic leaders and forgotten peoples. But although the places covered in this talk lie beyond the margins of legitimacy, virtually all can be visited in the real world.
+
+Filled with stories, facts and figures, this is simultaneously an insight into the power of territorial countries, an introduction to creating your own nation state, and a bucket list of destinations from an alternative dimension. Above all, it’s an assortment of yearning tales of nationhood, most led by visionary leaders: some sad, some mad, some downright bizarre.
+                    </p>
                 </div>
               </div>
             </div>
@@ -78,17 +80,2369 @@
         </div>
       </div>
 
-      {{/each}}
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_luis-cuende">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/luis-cuende.jpg" width="300" height="300" alt="Luis Cuende" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Opting out of the legal system: Introducing a decentralized court</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Luis Cuende</span>
+            <br> Co-founder at Aragon One</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_luis-cuende" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Luis Cuende">Luis Cuende</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/luis-cuende.jpg" width="200" height="200" alt="Luis Cuende" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Luis is the co-founder of Aragon One, one of the teams working on the Aragon project. Luis has been into crypto since 2011, and loves how decentralized organizations can solve the world’s worst problems.<br><br>Prior to that, Luis worked on the Linux space. He also worked on multiple Bitcoin projects in its early days, and has interest in other decentralization technologies such as mesh networks.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Opting out of the legal system: Introducing a decentralized court</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 13:00 - Studio 1</span>
+                    </div>
+                    <p>
+                      Crypto is disintermediating and commoditizing many things that used to be monopolies. Currency is an example of a monopoly that used to be owned by the nation state. But if we go to the very core of what nation states provide, they provide legal security and asset protection. They do that by implementing a court and legal system. Thanks to crypto and advancements in smart contract systems, we can now implement a fully decentralized court system. Let's explore how, and review how Aragon is implementing this system as an Internet-native jurisdiction for decentralized organizations and sovereign individuals.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_robin-hanson">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/robin-hanson.jpg" width="300" height="300" alt="Robin Hanson" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Who Vouches For You?: A Radical Crime Law Proposal</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Robin Hanson</span>
+            <br> Associate Professor of Economics, George Mason University</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_robin-hanson" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Robin Hanson">Robin Hanson</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/robin-hanson.jpg" width="200" height="200" alt="Robin Hanson" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Robin Hanson is associate professor of economics at George Mason University, and research associate at the Future of Humanity Institute of Oxford University. He has a doctorate in social science from California Institute of Technology, master's degrees in physics and philosophy from the University of Chicago, and nine years experience as a research programmer, at Lockheed and NASA.<br><br>Professor Hanson has 4126 citations, a citation h-index of 32, and over ninety academic publications. Oxford University Press published his book&nbsp;The Age of Em: Work, Love and Life When Robots Rule the Earth&nbsp;in June 2016, and his book&nbsp;The Elephant in the Brain: Hidden Motives in Everyday Life, co-authored with Kevin Simler, in January, 2018. Professor Hanson has 900 media mentions, given 350 invited talks, and his blog OvercomingBias.com has had eight million visits.<br><br>Professor Hanson has pioneered prediction markets, also known as information markets and idea futures, since 1988. He was the first to write in detail about creating and subsidizing markets to gain better estimates on a wide variety of important topics. He was a principal architect of the first internal corporate markets, at Xanadu in 1990, of the first web markets, the Foresight Exchange since 1994, of DARPA's Policy Analysis Market, from 2001 to 2003, and of IARPA's combinatorial markets DAGGRE and SCICAST from 2010 to 2015. Professor Hanson developed new technologies for conditional, combinatorial, and intermediated trading, and studied insider trading, manipulation, and other foul play. He has written and spoken widely on the application of idea futures to business and policy, and has advised many ventures. He suggests&nbsp;"futarchy", a form of governance based on prediction markets.<br><br>Robin has diverse research interests, with papers on spatial product competition, health incentive contracts, group insurance, product bans, evolutionary psychology and bioethics of health care, voter information incentives, incentives to fake expertise, Bayesian classification, agreeing to disagree, self-deception in disagreement, probability elicitation, wiretaps, image reconstruction, the history of science prizes, reversible computation, the origin of life, the survival of humanity, very long term economic growth, growth given machine intelligence, and interstellar colonization. He coined the phrase&nbsp;"The Great Filter"&nbsp;as part of an effort to understand why the universe looks so dead.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Who Vouches For You?: A Radical Crime Law Proposal</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 19:00 - Studio 1</span>
+                    </div>
+                    <p>
+                      Most ancient societies used simple A-sues-B-for-cash legal systems to deal with most harms. But in the last few centuries, states added “crime law”, wherein the state investigates, sues, and imprisons “criminals.” These centrally-run one-size-fits-all bureaucratic systems don’t innovate well nor adapt well to individual conditions. And even though most of your “constitutional rights” are regarding such systems, they still seem badly broken. 
+
+In the ancient world, a stranger who came to town was trusted more if a local “vouched” for them. We still use vouching today in bonded contractors, in organized crime, and in requiring most everyone to get an insurer who pays on their behalf if they cause a car accident. I propose requiring everyone to get an insurer to vouch for them regarding any crimes they might commit. If you are found guilty of a crime, your “voucher” pays the state a fine, and then pays to punish you according to your contract with them. This fine in part pays the private bounty-hunter who convinced the court of your guilt. Competing bounty-hunters obey law because they can’t maintain a blue-wall-of-silence.
+
+To lower your voucher premiums, you might agree to (1) prison, torture, or exile, if caught, (2) prior limits on your freedom like curfews, ankle bracelets, and their reading your emails, and (3) co-liability wherein you and your buddies are all punished if any one of you is found guilty. In this system, the state still decides what behaviors are crimes and if any one accusation is true, and it sets fine and bounty levels regarding how hard to discourage and detect each kind of crime. But each person chooses their own “constitutional rights”, and vouchers acquire incentives and opportunity to innovate and adapt, by searching in a large space of ways to discourage crime.
+                    </p>
+                      <hr>
+                    <h4>Who Vouches For You?: A Radical Crime Law Proposal (Livestream)</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 19:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      Most ancient societies used simple A-sues-B-for-cash legal systems to deal with most harms. But in the last few centuries, states added “crime law”, wherein the state investigates, sues, and imprisons “criminals.” These centrally-run one-size-fits-all bureaucratic systems don’t innovate well nor adapt well to individual conditions. And even though most of your “constitutional rights” are regarding such systems, they still seem badly broken. 
+
+In the ancient world, a stranger who came to town was trusted more if a local “vouched” for them. We still use vouching today in bonded contractors, in organized crime, and in requiring most everyone to get an insurer who pays on their behalf if they cause a car accident. I propose requiring everyone to get an insurer to vouch for them regarding any crimes they might commit. If you are found guilty of a crime, your “voucher” pays the state a fine, and then pays to punish you according to your contract with them. This fine in part pays the private bounty-hunter who convinced the court of your guilt. Competing bounty-hunters obey law because they can’t maintain a blue-wall-of-silence.
+
+To lower your voucher premiums, you might agree to (1) prison, torture, or exile, if caught, (2) prior limits on your freedom like curfews, ankle bracelets, and their reading your emails, and (3) co-liability wherein you and your buddies are all punished if any one of you is found guilty. In this system, the state still decides what behaviors are crimes and if any one accusation is true, and it sets fine and bounty levels regarding how hard to discourage and detect each kind of crime. But each person chooses their own “constitutional rights”, and vouchers acquire incentives and opportunity to innovate and adapt, by searching in a large space of ways to discourage crime.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_reinaldo-escobar-casas">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/reinaldo-escobar-casas.jpg" width="300" height="300" alt="Reinaldo Escobar Casas" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Freedom shortcuts to information highways</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Reinaldo Escobar Casas</span>
+            <br> Cuban independent journalist, Founder and Editor in Chief of 14ymedio.com</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_reinaldo-escobar-casas" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Reinaldo Escobar Casas">Reinaldo Escobar Casas</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/reinaldo-escobar-casas.jpg" width="200" height="200" alt="Reinaldo Escobar Casas" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Reinaldo Escobar Casas, was born in the city of Camagüey, Cuba on July 10, 1947. He studied journalism at the University of Havana. From 1973 to 1987, Reinaldo worked in “Cuba Internacional” (Cuba International) magazine and from 1987 to 1988 at “Juventud Rebelde” (Rebellious Youth) newspaper.<br><br>In December 1988, he was separated from the profession because of his differences with the Communist Party of Cuba. Since then he became an independent journalist.<br><br>Between 2004 and 2007 he was head of reaction of the digital magazine “Consenso” (Consensus) and in 2008 he opened his blog “Desde Aquí” (From Here) and since 2014 he is the editor-in-chief of the digital newspaper “14ymedio.com.”
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Freedom shortcuts to information highways</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 16:00 - Studio 1</span>
+                    </div>
+                    <p>
+                      Technological difficulties in connecting to the network, coupled with high prices and a control policy that attempts to censor sites where it disagrees with the government, create an atmosphere that hinders Cubans' relationship with the Internet.
+
+Young people manage to overcome obstacles by creating alternative networks and looking for a type of VPN or anonymous proxy, but the authorities do not stop generating prohibitions arguing the need to guarantee computer security.
+
+A strong social demand has been generated to improve connectivity and expand the spaces to visit. In the complicated situation of Cuba that suffers from the trade restrictions imposed by the United States and where the government applies an internal blockade, the solutions mix political audacity, technological innovation and economic entrepreneurship.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
-    {{#eq @index 1}}
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_paul-rosenberg">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/paul-rosenberg.jpg" width="300" height="300" alt="Paul Rosenberg" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Opting-Out, To Precisely What?</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Paul Rosenberg</span>
+            <br> Co-founder of Cryptohippie and author of the Freeman’s Perspective newsletter</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_paul-rosenberg" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Paul Rosenberg">Paul Rosenberg</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/paul-rosenberg.jpg" width="200" height="200" alt="Paul Rosenberg" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Paul Rosenberg is the author of the Free-Man's Perspective newsletter and the co-founder of Cryptohippie. He is also the author of A Lodging of Wayfaring Men, Production Versus Plunder and The Breaking Dawn. He is a co-author of The New Age of Intelligence.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Opting-Out, To Precisely What?</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 18:00 - Studio 1</span>
+                    </div>
+                    <p>
+                      Yes, we all want to escape the pressures and abuse of the reigning systems, but things don’t become magically wonderful just because we’ve opted-out. New structures and new ways of living have to be built outside, and even though we’ve made a nice start, it has been just a small start. We have a long, long way to go.
+
+We’re also guaranteed to face challenges on the outside, not only from bad people who may follow us there, but because none of us are fully developed, and we all carry some difficulties with us.
+
+Being outside gives us space to build anew and to create better structures for ourselves, and then to improve ourselves. We’ll have to choose our actions well and we’ll have to work hard, but if we do, even the sky will be no limit.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_josef-slerka">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/josef-slerka.jpg" width="300" height="300" alt="Josef Šlerka" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Parallel Polis Revisited: Way from concept of Parallel Polis to Distributed Republic (A Thought Experiment)</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Josef Šlerka</span>
+            <br> Head of New Media Studies at the Institute of Information Studies and Librarianship</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_josef-slerka" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Josef Šlerka">Josef Šlerka</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/josef-slerka.jpg" width="200" height="200" alt="Josef Šlerka" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Josef Šlerka is head of New Media Studies at the Institute of Information Studies and Librarianship at Charles University’s Faculty of Arts in Prague. His research focus is social network analysis and social media data mining. Other research interests and focus include digital humanities and quantitative media analysis. Josef Šlerka is also director of The Endowment Fund for Independent Journalism.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Parallel Polis Revisited: Way from concept of Parallel Polis to Distributed Republic (A Thought Experiment)</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Sunday 13:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      More info coming soon.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_ken-schoolland">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/ken-schoolland.jpg" width="300" height="300" alt="Ken Schoolland" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">The Oldest and Most Feared Opt-Out Strategy: Migration</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Ken Schoolland</span>
+            <br> Associate Professor of Economics and Director of the Entrepreneurship Center at Hawaii Pacific University</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_ken-schoolland" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Ken Schoolland">Ken Schoolland</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/ken-schoolland.jpg" width="200" height="200" alt="Ken Schoolland" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Ken Schoolland is an Associate Professor of Economics and Director of the Entrepreneurship Center at Hawaii Pacific University. He is President of Liberty International, on the Board of Scholars of the Grassroot Institute of Hawaii, a member of the Mont Pelerin Society, and former Chairman of the Libertarian Party of Hawaii. <br><br>Schoolland authored The Adventures of Jonathan Gullible: A Free Market Odyssey, published in 80+ editions in 50+ languages, and performed in theatrical productions across Africa, Europe, and Asia. <br><br>Schoolland was Director of the Graduate Program in Japanese Business Studies at Chaminade University of Honolulu and a professor of economics at Hakodate University in Japan. He served as an international economist in the U.S. International Trade Commission, the U.S. Department of Commerce, and U.S. Office of the Special Representative for Trade Negotiations.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>The Oldest and Most Feared Opt-Out Strategy: Migration</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 14:00 - Studio 1</span>
+                    </div>
+                    <p>
+                      Throughout history and around the world people have been 1) intent on controlling others; 2) content to be controlled; and 3) determined to be free of control by others. The latter group is constantly seeking and preparing contingencies for their own eventual and necessary escape to freedom. This can be aided by contemplating the paths taken by more than 240 million others in recent years with varying degrees of success. And surely the numbers would be much greater except for the multitude and measure of the obstacles. 
+
+Some paths to freedom are crude and unsophisticated, but nonetheless imaginative and brazen. The most apparent and direct way to avoid the clutches of tyranny is to physically move to places of relatively less tyranny. The movement of great numbers of people around the planet evokes passions of both courage and fear with all the consequent conflict and trauma for leavers &amp; remainers as well as for inviters &amp; excluders. 
+
+Ironically, much of the desperation of people in poor countries is aggravated by some, perhaps well-intentioned but calamitous, behavior by governments in prosperous countries: i.e. trade manipulations, drug wars, and assistance to foreign rulers. This assistance to rulers includes the closing of escape routes. Likewise, well-intentioned domestic government assistance and a multitude of labor and commercial laws have forcefully aggravated the adjustment and tolerance of migration into relatively prosperous and free countries. 
+
+Of many models possible as a solution to these dilemmas of migration, Hong Kong provides useful historical lessons that are practical, humanitarian, and ethical from a libertarian perspective.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_smuggler">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/smuggler.png" width="300" height="300" alt="Smuggler" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">The Forgotten Art of Anonymous Digital Cash: Opting-out of complexity and tracking in the sharing economy and beyond</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Smuggler</span>
+            <br> Cryptoanarchist and cypherpunk</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_smuggler" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Smuggler">Smuggler</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/smuggler.png" width="200" height="200" alt="Smuggler" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Cryptoanarchist for 20 years. An operator of anonymous remailers and darknet hangouts. Author (Second Realm - Book on Strategy, The Treasure that is Privacy, Aristocracy of Action). Privacy extremist and crypto absolutist. Coder, admin, network cuddler. Covert communications specialist.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>The Forgotten Art of Anonymous Digital Cash: Opting-out of complexity and tracking in the sharing economy and beyond</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 18:00 - Studio 1</span>
+                    </div>
+                    <p>
+                      Cypherpunks and cryptoanarchists have always dreamt of truely anonymous financial systems. This lead to Bitcoin and other blockchain cryptocurrencies. One episode of this development is widely overlooked today: Digital Cash, eCash, eCache and other Digital Bearer Certificate (DBC) systems.
+
+DBCs enable blazing fast, anonymous and untraceable transactions that resemble cash transactions much closer than cryptocurrencies. They are conceptually simple and require much less complex infrastructures. Nevertheless they have been ignored by cryptoanarchist researchers over the last decade.
+
+In this talk we shall explore the necessary properties of government-independent value transfer systems, how to decentralize DBCs, and what a future with digital anonymous micro-transactions means for the realization of cryptoanarchist ideas.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
   <div class="container container-expand">
-    {{/eq}}
-    {{/each}}
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_li-zhao-schoolland">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/li-zhao-schoolland.jpg" width="300" height="300" alt="Li Zhao Schoolland" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Why do we need to be and should be opt-out?</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Li Zhao Schoolland</span>
+            <br> Director of External Relations—Asia Pacific for the Acton Institute and the Founder of TFT Events</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_li-zhao-schoolland" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Li Zhao Schoolland">Li Zhao Schoolland</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/li-zhao-schoolland.jpg" width="200" height="200" alt="Li Zhao Schoolland" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Li Zhao Schoolland is an independent educator, writer, translator, and event organizer and a member of the Mont Pelerin Society.<br><br>Mrs. Schoolland survived 26 years through the horrors of Mao’s regime in China. This motivated her to a lifetime of promoting freedom and liberty globally through the organization of Austrian economics and entrepreneurship conferences and summer camps over two decades in Eastern Europe, Asia/Pacific, and North Africa. She arranges translation and publication of libertarian literature in China and coaches parents in raising liberty-minded youth. 
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Why do we need to be and should be opt-out?</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Sunday 18:00 - Studio 1</span>
+                    </div>
+                    <p>
+                      You will find the answer from the stories of my life. 
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_tone-vays">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/tone-vays.jpg" width="300" height="300" alt="Tone Vays" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Bitcoin - There Can Only be One</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Tone Vays</span>
+            <br> Crypto Analyst &amp; Derivatives Trader</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_tone-vays" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Tone Vays">Tone Vays</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/tone-vays.jpg" width="200" height="200" alt="Tone Vays" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Tone has worked on Wall Street for almost 10 years starting as a Risk Analyst at Bear Stearns and later becoming a VP at JP Morgan Chase in the aftermath of the 2008 financial crisis. His expertise is in Economic Trends, Trading and Risk Analysis. Ever since getting involved in the Crypto Currency ecosystem in early 2013, he has been very active in spreading the relevance and importance of this technology as it helps promote economic freedom. Tone has been featured in several Documentaries like Magic Money &amp; Bitcoin - Beyond the Bubble. Tone is now an independent content creator at ToneVays.com and on his YouTube Channel focused on sound economics &amp; finance. Tone holds a Masters Degree in Financial Engineering from Florida State University along with Bachelor Degrees in Mathematics and Geology. 
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Bitcoin - There Can Only be One</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 17:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      Dominance is back to 70%, which begs the following question: is it just getting started as it surpasses it's former status (pre-2017 bubble) or will the Alt Season come back? This presentation will thoroughly demonstrate how Altcoins like Litecoin &amp; Monero and Blockchians like Ethereum &amp; Cordana are truly shitcoins and the only path for them is towards a value of 0.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_peter-todd">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/peter-todd.jpg" width="300" height="300" alt="Peter Todd" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Dishonest Devs: Defeating Insider Attacks on Decentralized Tech</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Peter Todd</span>
+            <br> Bitcoin developer</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_peter-todd" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Peter Todd">Peter Todd</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/peter-todd.jpg" width="200" height="200" alt="Peter Todd" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Peter Todd is an applied cryptography consultant known for his work on the OpenTimestamps project, Bitcoin protocol research, and contributions to the Bitcoin Core project.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Dishonest Devs: Defeating Insider Attacks on Decentralized Tech</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Sunday 17:00 - Studio 1</span>
+                    </div>
+                    <p>
+                      Decentralized systems are meant to be trustless. But our interactions with tech is always mediated by software. This talk will cover the threat, including real and hypothetical attacks, what it takes for communities to defeat these attacks, and how we can better design decentralized systems to defeat these attacks.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_mark-nadal">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/mark-nadal.jpg" width="300" height="300" alt="Mark Nadal" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Opt-Out of Money: for Fun &amp; Profit!</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Mark Nadal</span>
+            <br> GUN Founder</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_mark-nadal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Mark Nadal">Mark Nadal</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/mark-nadal.jpg" width="200" height="200" alt="Mark Nadal" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Mark is a mathematician turned programmer. He runs a VC backed Open Source company and has traveled to 30 countries. The diverse cultures he has experienced fuels his passion for learning, sharing, and creating open technology freely for all.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Opt-Out of Money: for Fun &amp; Profit!</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Sunday 16:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      Civilization is going through a rapid radical shift, from a pre-Internet age to the Uberification of Industry, the Decentralization of Education, and the Polarization of Government. Both Industry &amp; Government have figured out how to exploit the loopholes in the economic models of Capitalism &amp; Socialism, without any ability for citizen people to opt-out. In this talk, we'll explore the 6 problems any economic system must address and see if there are holes that humanity can escape through.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_matthias-tarasiewicz">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/matthias-tarasiewicz.jpg" width="300" height="300" alt="Matthias Tarasiewicz" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">The past, present and future of Opt-Out with Open and Libre Hardware</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Matthias Tarasiewicz</span>
+            <br> Director of RIAT - Institute for Future Cryptoeconomics, Researcher and Technology Theorist</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_matthias-tarasiewicz" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Matthias Tarasiewicz">Matthias Tarasiewicz</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/matthias-tarasiewicz.jpg" width="200" height="200" alt="Matthias Tarasiewicz" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Matthias Tarasiewicz is the director of RIAT (Institute for Future Cryptoeconomics) in Vienna, an independent research organisation with focus on decentralisation, cryptography and the future of cryptoeconomic societies. Matthias also is board member of the Open Source Hardware Association OSHWA. In the past he has led research projects including Artistic Technology Research at the University of Applied Arts Vienna, 'Making Artistic Technology' and AXIOM – Open Hardware Cinema project as best-practice Open Hardware project for the EU Horizon 2020 programme. His publications include “Forking as cultural practice: Institutional governance after the DAO” (2017), “Cryptocurrencies as Distributed Community Experiments” (2014), and “Coded Cultures: New Creative Practices out of Diversity” (2011). He actively researches in cryptocurrencies and blockchain since 2010 and has a background in computer science, design and systems theory.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>The past, present and future of Opt-Out with Open and Libre Hardware</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 18:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      FOSH (Free and Open Source Hardware) in the past years has moved away from being a small niche and has developed to a relevant movement with significant and well-known projects. Open Science Hardware offers an opt-out potential against centralisation, as visible in the "Safecast"
+
+Crowd Science Geiger Counter, which offered concerned people a chance to fact-check radiation levels after the Fukushima incident in Japan.
+
+Open Hardware has a success story to tell - but what does "open" in this context mean? How open can hardware be, post the age of microcomputing? Verifiable hardware could even help future nuclear disarming (see 34C3, "Vintage Computing for Trusted Radiation Measurements and a World Free of Nuclear Weapons"). In contrast, the actual hardware landscape is neither very open, nor verifiable.
+
+Additionally, HSMs and TEEs are challenging zero-trust by introducing novel attack vectors. Mistrust in modern day processors are growing, especially after “Spectre”, “Foreshadow” and “Spoiler”. Full Opt-Out possibility is presently not possible, Free and Open Source Silicon can the first step to a Zero-Trust society - but the future remains speculative.
+
+[This talk is part of the #OHM2019 Open Hardware Month]
+[Please in this context also see the workshop “Black Crystal” on 5th of October]
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_petr-lupac">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/petr-lupac.jpg" width="300" height="300" alt="Petr Lupač" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Constructing parallel opt-out infrastructures: A sociological contribution</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Petr Lupač</span>
+            <br> Assistant Professor at the Department of Sociology, Faculty of Arts, Charles Univerzity (CZ)</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_petr-lupac" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Petr Lupač">Petr Lupač</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/petr-lupac.jpg" width="200" height="200" alt="Petr Lupač" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Petr Lupač obtained a Doctoral Degree in Sociology from the Faculty of Arts at Charles University, Czech Republic where he now serves as Assistant Professor. He has participated in academic and research programmes in Kansas State University and New York University. His primary sociological interests include technology, globalization and media. Since 2015, he has also been working as an external consultant for the Czech Strategy for Digital Literacy. He is the Czech representative for the World Internet Project. Recently, he published the book Beyond the Digital Divide: Contextualizing the Information Society. 
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Constructing parallel opt-out infrastructures: A sociological contribution</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 15:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      We are deeply entrenched in numerous socio-technological systems that structure our everyday life. They function by channelling, prohibiting, controlling, limiting, categorizing, standardizing (…) our behaviour. Just count how many of these systems you have “joined/used” to this very day.
+
+Current ideas and attempts at finding a technological solution to help us opt out from this “first constrained realm” are not entirely novel.  In light of this congress, the one most worth considering is the very notion of a decentralized and free computer network, one which should catalyse a positive societal revolution and leave behind the evils of centralised and alienating state-corporate systems.
+
+By employing a sociological approach (namely sociology of technology), we will look at what went wrong in the socio-technical history of the free computer network project and examine how the resulting system forms new hard-to-escape dependencies. 
+
+Was A Declaration of the Independence of Cyberspace too early, just in time or too late? Is it even possible to construct a technological infrastructure to opt out of “the first realm“? Which sociological criteria would facilitate an opt-out system? And lastly, how are new dependencies formed when two parallel systems meet?
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_max-hampshire">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/max-hampshire.jpg" width="300" height="300" alt="Max Hampshire" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Counterecologies:  a select history of autonomy, sovereignty and ecology in the cryptosphere</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Max Hampshire</span>
+            <br> Developer and Crypto Researcher</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_max-hampshire" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Max Hampshire">Max Hampshire</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/max-hampshire.jpg" width="200" height="200" alt="Max Hampshire" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Max Hampshire is a developer and crypto researcher based in Manchester and Berlin. He holds an MA from the UvA, where he studied the philosophy of technology under Dr. Federica Russo, and is one of three co-founders of terra0. As well as currently bootstrapping EXIT TECH studio Nascent, he is an industrial smart contract and decentralized systems dev for Blocklab Rotterdam, and has previously worked with the RIAT Institute for Future Cryptoeconomics and the Institute of Network Cultures. His work has been presented and discussed at Schinkel Pavillon, Grey Area Festival, Transmediale, Furtherfield Gallery, Ars Electronica, and Het Nieuwe Instituut (amongst others), and has been published and discussed in/by ecocore, Forbes, and James Bridle’s radio series ‘New Ways of Seeing’.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Counterecologies:  a select history of autonomy, sovereignty and ecology in the cryptosphere</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 14:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      Science fiction has always served as a testbed for the reimagining of possible organizational structures outside of the existing state apparatus. We will present a historical analysis of previous attempts - both in SF literature and IRL - to exit existing power structures and move towards a practice of creating counter-economic and ecologically-oriented organizational structures, as well as discuss the tactics and experiments for doing so we assumed whilst working on terra0. Following this grounding, we will present our conceptualization of counter-economic ecological actions, how DLT, p2p systems and asymmetric key cryptography can help actualize them, and what we think this means for the future of tech development and social coordination.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_paul-seidler">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/paul-seidler.jpg" width="300" height="300" alt="Paul Seidler" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Counterecologies:  a select history of autonomy, sovereignty and ecology in the cryptosphere</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Paul Seidler</span>
+            <br> Artist and Researcher</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_paul-seidler" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Paul Seidler">Paul Seidler</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/paul-seidler.jpg" width="200" height="200" alt="Paul Seidler" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Paul Seidler is an artist/researcher living and working in Berlin. Since 2013 he studied at the University of Arts Berlin where he co founded terra0. During his studies, he worked in various research facilities, including the Design Research Lab and the Hybrid Plattform. His projects and papers have been presented at CTM, Transmediale, republica, Dutch Design Week and ecocore. He exhibited in galleries and institutions including Schinkel Pavillon, Furtherfield, Biennale international Saint Etienne, Grey Area Festival and Vienna Biennale. After graduating he worked as a Researcher at the Design Research Lab Berlin while bootstrapping Nascent, an EXIT TECH production studio.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Counterecologies:  a select history of autonomy, sovereignty and ecology in the cryptosphere</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 14:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      Science fiction has always served as a testbed for the reimagining of possible organizational structures outside of the existing state apparatus. We will present a historical analysis of previous attempts - both in SF literature and IRL - to exit existing power structures and move towards a practice of creating counter-economic and ecologically-oriented organizational structures, as well as discuss the tactics and experiments for doing so we assumed whilst working on terra0. Following this grounding, we will present our conceptualization of counter-economic ecological actions, how DLT, p2p systems and asymmetric key cryptography can help actualize them, and what we think this means for the future of tech development and social coordination.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_park-jung-oh">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/park-jung-oh.png" width="300" height="300" alt="Park Jung Oh" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent"></p>
+              </figcaption>
+                <figcaption>
+                  <p class="text-uppercase accent">More info</p>
+                </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Park Jung Oh</span>
+            <br> North Korean defector activist</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_park-jung-oh" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Park Jung Oh">Park Jung Oh</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/park-jung-oh.png" width="200" height="200" alt="Park Jung Oh" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Mr. Park was born in 1968 in Hyesan, Yanggang Province, North Korea. After graduating from The Communication College, Park worked at the Radio Wave Surveillance Station from 1993 to 1998 as a supervisor. He continued his education at Yanggang University, where he graduated with a degree in Agriculture in 1998; shortly after, he decided to defect with his five other family members. Park had to hide for two and half years in China until he made his way to South Korea in 2001.&nbsp;<br><br>Mr. Park is a highly respected member of the North Korean defector community in Seoul who does many community outreach programs and ventures to help the defectors that live in his area, including food distribution, and community activities and events such as New Year's family gatherings and sports events.&nbsp;<br>Since his arrival in South Korea, he has helped his brother with the balloon launches into North Korea and has also established an after school education center for North Korean defector children in Seoul, 'Kuen Saem Education Center' which provides free English lessons and other tutorial help. Mr. Park is also the founding members of the 'Send Rice Aid Directly to the North Korean People', a project of Kuen Saem which sends rice and USBs and other goods in plastic water bottles into North Korea via the ocean. This project is currently the only regular humanitarian and information delivery project carried out into North Korea, and has spoken about this project and the school at the U.S. State Department, events in Washington, D.C., and most recently, at the annual Internet Freedom Festival (IFF) in Valencia, Spain.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+		  <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_spyros-dovas">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/spyros-dovas.jpg" width="300" height="300" alt="Spyros Dovas" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Crypto-Enabled Time Travel</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Spyros Dovas</span>
+            <br> Entrepreneur, crypto enthusiast.</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_spyros-dovas" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Spyros Dovas">Spyros Dovas</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/spyros-dovas.jpg" width="200" height="200" alt="Spyros Dovas" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Crypto-Enabled Time Travel</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 16:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      Technology to skip the present times is available today, and improving fast. It is not for the faint-hearted, for sure. But for safely landing into the future, not as a poor immigrant from the past, but rather as a rich tourist, technology is not enough. The right incentives must get aligned and be put to work. This talk is about what is missing, and how Crypto could be the final ingredient to really achieve time travel.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_yisi-liu">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/yisi-liu.jpg" width="300" height="300" alt="Yisi Liu" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Enhanced Privacy with Decentralized Identity</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Yisi Liu</span>
+            <br> A Hacker, A Dreamer</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_yisi-liu" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Yisi Liu">Yisi Liu</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/yisi-liu.jpg" width="200" height="200" alt="Yisi Liu" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Yisi is now working with fantastic developers at Dimension.im on various projects towards a decentralized and privacy-preserving web. He is focusing on how to apply cryptography algorithms and schemes to the real world, including two ongoing projects at Dimension, maskbook.com and tessercube.com, to bring users a web with privacy. He used to be a natural language processing researcher but decided to work on real-world cryptography and data privacy protection when he realized the double-edged sword of how big companies are using and "abusing" user's data in their lives. He is a true believer of the decentralized web and would like to bring it to more users all over the world.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Enhanced Privacy with Decentralized Identity</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 14:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      A brief introduction to decentralized identities and how our open-source company enables users to talk freely on the existing Internet.
+
+People are under massive censorship on the current Internet. They cannot escape but stay because they never have an option: all their connections are still on the same platforms and most of them don't even know that their privacies are being violated. We will discuss this problem first and then propose our solution: maskbook.com and tessercube.com. Both of them are adopting a decentralized identity idea and enables users to protect their privacies without being violated by the companies. People finally got an alternative option that not only preserves their privacies but also letting them stay on the existing Internet. We believe this would help users move towards crypto-anarchism.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_jiri-horacek">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/jiri-horacek.jpg" width="300" height="300" alt="Jiří Horáček" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Things which matter the most: reality, brain and consciousness</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Jiří Horáček</span>
+            <br> Deputy director for RαD, National Institute of Mental Health &amp; Professor of Psychiatry, Third Faculty of Medicine, Charles University in Prague</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_jiri-horacek" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Jiří Horáček">Jiří Horáček</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/jiri-horacek.jpg" width="200" height="200" alt="Jiří Horáček" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Jiří Horáček, M.D., Ph.D. is a Professor of Psychiatry at the 3rd Faculty of Medicine, Charles University, Prague, Czech Republic. He holds a degree in psychiatry and psychotherapy. He is currently the Deputy Director of the National Institute of Mental Health, Czech Rep.<br><br>Prof. Jiří Horáček has been actively involved in 50 scientific research projects. His research activities involve the use of brain imaging (PET, fMRI and qEEG) in the fields of schizophrenia, depression and OCD, psychiatric genetics, psychedelic science and the modeling of mental disorders in both rodents and humans. He is the editor of several books and the author of more than 100 scientific articles. Prof. Jiří Horáček has received several national and international psychiatric awards from the International Pharmaco-EEG Society (Werner Hermann Memorial Award), the Czech Neuropsychopharmacological Society and ECNS-ISNIP.  In his productive career he has been awarded the Senior Research Fellow of the Bedfordshire CMHR in association with the University of Cambridge. He was also the President of the Czech Neuropsychopharmacological Society.   
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Things which matter the most: reality, brain and consciousness</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 14:00 - Studio 1</span>
+                    </div>
+                    <p>
+                      Linking physical reality, brain activity and consciousness still stands as one of the most interesting and elusive problems of neuroscience, psychology, psychiatry and philosophy. Finding their mutual relationships represents the first step toward explanation how the brain process external information and how the picture of reality in our mind relates the world.
+
+In this lecture, I deal with two central questions of consciousness: how and why? “How” refers to the theoretical and empirical approach to reveal the neural correlates and mechanisms that form consciousness. On the other hand, “why” refers to both the evolutionary origin and the question why is there conscious experience at all. 
+
+The extraordinary states of consciousness elicited by the psychedelics, such as DMT, psilocybin and LSD, represent one of the most powerful tools for understanding neurobiology of consciousness and answering both “why” and “how” questions. The results of brain neuroimaging studies on the effect of psychedelic drugs on structure of consciousness provide an explanation for its phenomenological features, including unconstrained cognition, meaning of concepts of reality and a sense of expanded consciousness awareness. We will discuss how psychedelics, and other modern techniques such as neurostimulation, may increase cognitive flexibility and creativity, elucidate our understanding of the structure of external physical reality and enhance human potential in general. 
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_harry-halpin">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/harry-halpin.png" width="300" height="300" alt="Harry Halpin" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Code is a Weapon</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Harry Halpin</span>
+            <br> CEO of Nym Technologies and anarchist</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_harry-halpin" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Harry Halpin">Harry Halpin</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/harry-halpin.png" width="200" height="200" alt="Harry Halpin" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Harry Halpin&nbsp;is the CEO of&nbsp;Nym Technologies, a start-up creating an incentived mix-net with anonymous authentication credentials. Previously, he led research projects against surveillance like at Inria like&nbsp;PANORAMIX&nbsp;and the W3C Web Cryptography standardization effort. He has also been the target of undercover cops across multiple countries, including the infamous&nbsp;Mark Kennedy.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Code is a Weapon</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Sunday 14:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      In the era of ubiquitous surveillance and globally-banked cryptocurrency projects like Facebook's Libra, how can cryptoanarchists fight back? Through cryptographic code! We'll survey the grim state of surveillance, starting with the industrialization of NSA mass surveillance via companies like Chainanalysis to the recent targeting of Assange. We'll present two new systems that are capable of resisting even global adversaries with a full view of the network: Anonymous credentials and mix-networks.
+
+We'll explain how new advances in mix-networking can be integrated with anonymous access credentials to provide end-to-end privacy against even the most powerful of adversaries.
+
+We'll demonstrate how mix-nets provide better anonymity than either Tor or VPNs, and how probabilistic mix-networks such as Loopix can be extended to handle a decentralized environment. We'll also describe new advances in anonymous access credentials, so that with threshold signatures they also function in a decentralized environment. Lastly, we'll discuss how financial incentives enabled by blockchains allow these technologies to become self-sustaining.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_marketa-dolejsova">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/marketa-dolejsova.jpg" width="300" height="300" alt="Marketa Dolejsova" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">“Of Course There Are Risks Involved But It Is My Body After All”: Paradoxes of Personalized Nutrition &amp; Diet Hacking</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Marketa Dolejsova</span>
+            <br> Design Researcher</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_marketa-dolejsova" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Marketa Dolejsova">Marketa Dolejsova</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/marketa-dolejsova.jpg" width="200" height="200" alt="Marketa Dolejsova" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Markéta is a design researcher with a background in Human-Computer Interaction (HCI) and Food Studies. Her research combines the methods and techniques of Research through Design (RtD) with ethnography to investigate the growing role of digital and bio-technologies in everyday human-food practices. She is currently a postdoctoral research fellow at the Faculty of Social and Economic Studies, Jan Evangelista Purkyně University, and a research fellow in New Media Studies at the Charles University (CZ). She has co-founded several independent design research collectives including the HotKarot &amp; OpenSauce, Fermentation GutHub, Extreme Biopolitical Bistro, and ALTTAB. In 2018, she received a PhD in Interactive Media Design at the National University of Singapore for her doctoral project Edible Speculations: Designing for Human-Food Interaction. Her work is regularly published in HCI and design research journals and conference proceedings.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>“Of Course There Are Risks Involved But It Is My Body After All”: Paradoxes of Personalized Nutrition &amp; Diet Hacking</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 17:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      Roman poet and philosopher Lucretius said in the 1st century BC that what is food to one, may be bitter poison to others. In 2019, hyperconnected, health-focused consumers return to this premise and claim the obsolescence of one-size-fits-all dietary guidelines in favor of personalized nutrition (PN) approaches. Drawing on the recent advances in self-quantification technologies, affordable machine learning, and genome sequencing techniques, PN practitioners experiment with food products and services tailored to their individual lifestyle preferences as well as phenotypic and genotypic traits. ​These practitioners are often motivated by their distrust in official dietary recommendations issued by food and health authorities, and prefer a knowledge derived through self-experimentation. By measuring and quantifying their everyday food intake and outtake, they aim to develop a — supposedly precise — data-driven understanding of their bodies and diets. ​PN provides opportunities for empowered human-food relationships but also risks regarding limited scientific validity, health safety, and data security.
+
+This talk presents findings from our long-term research on emerging PN technologies, practices, and issues. I will discuss a three-year ethnographic study of the ​Complete Foods​ community of ‘diet hackers’ replacing their daily meals with personalized food powders, and share insights from our recent ​DNA Diets​ project exploring the risks and opportunities of gene-based PN. The ​Complete Foods​ (CF) study ​(2014-2017) involved interviews with 65 ​CF dieters, a content analysis of three ​CF​ ​community forums, and two autoethnographic self-experiments where I probed the opportunities and limitations of the diet on myself. The ​DNA Diets​ study initiated in 2019, involves experiments with the Promethease service enabling a DIY analysis of personal DNA test reports, and crafting of dinner menus tailored to my and collaborator’s genetic codes. ​Findings from both case studies will be discussed within the broader context of food-tech innovation and data-driven optimization of everyday food and health practices.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_inbar-preiss">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/inbar-preiss.jpg" width="300" height="300" alt="Inbar Preiss" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">The revolution of decentralized journalism and its role in conflict zones</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Inbar Preiss</span>
+            <br> Writer, journalist, SalamTalk co-founder</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_inbar-preiss" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Inbar Preiss">Inbar Preiss</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/inbar-preiss.jpg" width="200" height="200" alt="Inbar Preiss" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    A digital nomad and accomplished journalist in the field of blockchain and cryptocurrencies. Working on a decentralized journalism platform which aims to to expose political conflicts from within, facilitate dialogue and enable free speech, following the belief that decentralization has the ability to transform societies and empower individuals.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>The revolution of decentralized journalism and its role in conflict zones</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Sunday 15:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      The media landscape is transforming as decentralized, peer-to-peer networks are emerging. In conflict zones, this can be a missing piece to expose what is really going on, and facilitate dialogue. What is the role of centralized media in conflict? How do can we deal with censorship and manipulation of information? Does objectivity exist?How do we prevent digital colonialism? How do we have a conversation with our enemy?&nbsp;
+
+It is time to acknowledge the important role of technology to provide the utmost security and freedom of speech in conflict zones and highly government-controlled areas.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_juraj-bednar">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/juraj-bednar.png" width="300" height="300" alt="Juraj Bednár" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Financial surveillance and crypto utopias</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Juraj Bednár</span>
+            <br> Hacker and entrepreneur</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_juraj-bednar" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Juraj Bednár">Juraj Bednár</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/juraj-bednar.png" width="200" height="200" alt="Juraj Bednár" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Juraj Bednár is a co-founder of Paralelní Polis and Paralelná Polis Bratislava. He is interested in hacking everything. He founded several companies, mainly in IT security. He hacks his brain, biology and the world by creating parallel societies.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Financial surveillance and crypto utopias</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 14:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      In a world where financial surveillance is a norm and banking secrecy is gone, what are our option? And how does the surveillance apparatus really work? 
+
+The introduction of global regulations on financial transactions had a profound effect. As far as we know, no terrorists were caught because of them. Banking secrecy is gone. It is more difficult to conduct international business. International transactions are being examined and blocked. Commerce is slowing down. The banks are running a police station for the state, enforcing a regulation that is not clear. Conducting international business has become unpredictable.
+
+This creates the value proposition for cryptocurrencies. They bring back privacy, the speed of transactions and are regulated by code, not international agreements. They are difficult to confiscate, some of them are fast, most of them are cheap. And some of them are anonymous. Are cryptocurrencies the next step in the evolution of the financial sector? Or is it a parallel solution to a pressing issue?
+
+This talk looks at the development of financial surveillance. It looks at current financial surveillance and risk management systems. It covers the best use-cases for cryptocurrencies and their value proposition. They are not speculation for gamblers, but a solution to a new pressing issue.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_michal-postranecky">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/michal-postranecky.jpg" width="300" height="300" alt="Michal Postránecký" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Opt-Out for the Cities of the Future?</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Michal Postránecký</span>
+            <br> Autonomous Architect and Urbanist</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_michal-postranecky" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Michal Postránecký">Michal Postránecký</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/michal-postranecky.jpg" width="200" height="200" alt="Michal Postránecký" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Ing. arch. Michal Postránecký is a Czech architect and urbanist currently living in Florida, USA. His portfolio counts many projects in the Czech Republic and the USA, where he has lived and worked since 2000. He focuses on eco-friendly and smart projects, the regeneration of existing settlements and the design of new urban structures with the help of smart technologies. He is the founder and head of Center of City of the Future Center within, Czech Institute of Informatics, Robotics and Cyberentics CTU and he is also a founder of SynopCity.com, a global platform for sharing information, knowledge. and experience, focusing on the Smart and Innovative Cities concepts. He is the author of a number of scholarly articles on smart cities and related issues. Together with Professor Svítek and a team of their colleagues, he is the author of the book The City of Future.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Opt-Out for the Cities of the Future?</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 13:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_frantisek-vrabel">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/frantisek-vrabel.jpg" width="300" height="300" alt="František Vrábel" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Dictatorship 2.0: 'powered by AI'</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">František Vrábel</span>
+            <br> Founder &amp; CEO, Semantic Visions</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_frantisek-vrabel" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="František Vrábel">František Vrábel</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/frantisek-vrabel.jpg" width="200" height="200" alt="František Vrábel" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Frantisek Vrabel is the founder and CEO of Semantic Visions, a Czech company that collects and analyses 90% of the world’s online news in real time. He is a serial entrepreneur with Silicon Valley experience, a wide spectrum of knowledge and a passion for exploring new horizons. Frantisek deeply understands the media ecosystem and how it is being abused by democracy's adversaries. He alerts people to the danger of sharing personal information through online platforms powered by heartless algorithms.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Dictatorship 2.0: 'powered by AI'</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Sunday 18:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      This analysis of hostile state sponsored disinformation will serve as an introduction to the more nuanced analysis of Facebook, which plays a key role in those campaigns. This speech will explain Facebook’s shameful business model supported by AI algorithms with no ethical and social dimensions. This way, AI is used for the nasty dehumanization of mankind – in the name of profit and even more power for Facebook’s founder. 
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_sondre-bjellas">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/sondre-bjellas.jpg" width="300" height="300" alt="Sondre Bjellås" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">How to build our own city</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Sondre Bjellås</span>
+            <br> Co-founder of Liberstad</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_sondre-bjellas" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Sondre Bjellås">Sondre Bjellås</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/sondre-bjellas.jpg" width="200" height="200" alt="Sondre Bjellås" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Sondre joined forces with John Holmesland in 2015, and together they established Liberstad in 2017. Liberstad is a project which aims to establish Norway's first private city.<br><br>With more than 20 years in software development and architecture, Sondre is responsible for the technology development required for establishment of a free private city.<br><br>After blogging for some years about voluntaryism, anarchism and Austrian economics, Sondre formed with other community members, the Norwegian branch of the Ludwig von Mises Institute.<br><br>After years of research and planning to move to any of the planned and projected private community projects, the ideas and plans changed and eventually become what Liberstad is today.<br><br>Sondre is not afraid to get his hands dirty, and does everything from hitting nails with hammer, to blockchain technology, distributed software services, community solutions and merchant solutions to be used in Liberstad, and similar communities around the world.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>How to build our own city</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Sunday 15:00 - Studio 1</span>
+                    </div>
+                    <p>
+                      Get an introduction and status update on the Liberstad project, which aims to establish Norway's first private city. More than 125 people from 33 different countries from all around the world have invested in properties in Liberstad. Join this talk to learn more about this exciting project!
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_olga-ukolova">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/olga-ukolova.jpg" width="300" height="300" alt="Olga Ukolova " class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">NAP for artificial agents: will AI knock before slamming the humanity's door?</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Olga Ukolova </span>
+            <br> COO at Pandora Core and Co-creator of The FreeAI Manifesto</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_olga-ukolova" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Olga Ukolova ">Olga Ukolova </h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/olga-ukolova.jpg" width="200" height="200" alt="Olga Ukolova " class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Olga Ukolova, MD, is COO at Pandora Core and one of the creators of The FreeAI Manifesto. Having neuroscientific and biohacking background Olga has been involved in the development of brain-computer interfaces and new types of cognitive architectures for machine learning tasks at BICA Labs. For 2+ years Olga has been managing academic research teams and spent last 8+ years working with geeks, cypherpunks and development teams in order to bring censorship-resistant and decentralized post-humanity future.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>NAP for artificial agents: will AI knock before slamming the humanity's door?</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 14:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      Each code of conduct is a derivative from nature of actors and nature of interaction between them. Humans have been trying to overcome (or suppress) their nature by creating moral standards, rules, by means of which they could judge each other and decide  whether to build the interaction further or to refuse and disrupt the communication. 
+
+For the last decades we have been trying to apply our ethics and moral principles to other types of agents - artificial ones, in order to judge them and be capable of reacting accordingly. But do computers have the nature similar to ours that would make the application possible? Will the nature of interaction between artificial and biological agents be the same as human-to-human? Will AI have a goodwill to politely ask us to cooperate before tearing down our barbed wire fences?
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_michal-zatrepalek">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/michal-zatrepalek.jpg" width="300" height="300" alt="Michal Zatřepálek " class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Story of Parallel Garden: Making Environmental Change From Scratch</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Michal Zatřepálek </span>
+            <br> Co-founder of Parallel Garden</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_michal-zatrepalek" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Michal Zatřepálek ">Michal Zatřepálek </h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/michal-zatrepalek.jpg" width="200" height="200" alt="Michal Zatřepálek " class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Michal is co-founder of Parallel Garden and entrepreneur with special focus on strategic management. In 2014, he started his first cryptocurrency minning project and got involved in Paralelni Polis shortly after its foundation. Inspiration by fundamental ideas of Bitcoin and practical minning experience lead him to start solving residual heat produced by miners in project "Kotel" ("The Boiler" in Czech). Especially thanks to his experience he understood substantial significance in linking ("bridging") cooperation between the disciplines and further develops this activity.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Story of Parallel Garden: Making Environmental Change From Scratch</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 19:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      You know the feeling: There is a an issue. The big one and globally significant. You understand its urgency and you would like to solve it. And you are alone, or there is only few of you. So what can you do? Get involved in politics. Initiate the protests or get involved in the existing ones. Will you succeed? Maybe or maybe not.
+
+There is also another way of investing your time and energy - start the change on your own. Get a couple of similar minded people and start working on practical solutions. Make the first prototype. Then, address the relevant community with it and analyze the feedback. Learn, develop and scale after then. 
+
+As a members of Paralelni Polis community, we were surrounded by several environmental clichés, mostly about the eco-unfriendly cryptocurrency mining. Actually, their substance was similar to many others environmental issues: many debates and only a few practically-based conclusions with very poor impact. So, we decided to take action. We built up our first hydroponic system, start cooperation with hackerspace in order to include automation. And start the path to automated rooftop greenhouse. We also open-sourced all of our know-how in order to make it spread as far as possible. The accurate feedback on the effect of our actions was substantial to us - so we refused state-based financial sources and emphasize the peer-to-peer relation. We will be happy to share our story with you! In the meantime, we don 't waste time and iterate!
+
+AFTER THE TALK you are more than welcomed to join the guided tour - Parallel Garden team will show you hydroponic systems and FarmBot installed in Paralelní Polis and tell you further details.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_jakub-hamata">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/jakub-hamata.jpg" width="300" height="300" alt="Jakub Hamata " class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Story of Parallel Garden: Making Environmental Change From Scratch</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Jakub Hamata </span>
+            <br> Co-founder of Parallel Garden</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_jakub-hamata" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Jakub Hamata ">Jakub Hamata </h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/jakub-hamata.jpg" width="200" height="200" alt="Jakub Hamata " class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Jakub co-founded Parallel Garden and manages activities within the main area of project specialization - agricultural technologies. As a graduated landscape manager and designer he spent several years operating resorts in remote tropical areas. Jakub is co-author of first hydroponic systems located in cafeteria in Paralelni Polis. Currently, he develops hydroponic systems controlled by IoT devices.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Story of Parallel Garden: Making Environmental Change From Scratch</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 19:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      You know the feeling: There is a an issue. The big one and globally significant. You understand its urgency and you would like to solve it. And you are alone, or there is only few of you. So what can you do? Get involved in politics. Initiate the protests or get involved in the existing ones. Will you succeed? Maybe or maybe not.
+
+There is also another way of investing your time and energy - start the change on your own. Get a couple of similar minded people and start working on practical solutions. Make the first prototype. Then, address the relevant community with it and analyze the feedback. Learn, develop and scale after then. 
+
+As a members of Paralelni Polis community, we were surrounded by several environmental clichés, mostly about the eco-unfriendly cryptocurrency mining. Actually, their substance was similar to many others environmental issues: many debates and only a few practically-based conclusions with very poor impact. So, we decided to take action. We built up our first hydroponic system, start cooperation with hackerspace in order to include automation. And start the path to automated rooftop greenhouse. We also open-sourced all of our know-how in order to make it spread as far as possible. The accurate feedback on the effect of our actions was substantial to us - so we refused state-based financial sources and emphasize the peer-to-peer relation. We will be happy to share our story with you! In the meantime, we don 't waste time and iterate!
+
+AFTER THE TALK you are more than welcomed to join the guided tour - Parallel Garden team will show you hydroponic systems and FarmBot installed in Paralelní Polis and tell you further details.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_radim-kozub">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/radim-kozub.png" width="300" height="300" alt="Radim Kozub" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Story of Parallel Garden: Making Environmental Change From Scratch</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Radim Kozub</span>
+            <br> Co-founder of Parallel Garden and Blockchain Legal</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_radim-kozub" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Radim Kozub">Radim Kozub</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/radim-kozub.png" width="200" height="200" alt="Radim Kozub" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Radim is attorney-at-law and proud implementer of Paralelni Polis ideas. As a co-founder of Parallel Garden, he is primarily in charge of legal agenda - however, not only in a way you would assume. Project based on ideas of Paralelni Polis demands effort to keep the compliance with its ideas. It covers either searching for specific rules, or even creating the new ones.  In 2017, Radim also co-founded Blockchain Legal, law firm focused on cryptocurrencies and digital technologies based in Prague.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Story of Parallel Garden: Making Environmental Change From Scratch</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 19:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      You know the feeling: There is a an issue. The big one and globally significant. You understand its urgency and you would like to solve it. And you are alone, or there is only few of you. So what can you do? Get involved in politics. Initiate the protests or get involved in the existing ones. Will you succeed? Maybe or maybe not.
+
+There is also another way of investing your time and energy - start the change on your own. Get a couple of similar minded people and start working on practical solutions. Make the first prototype. Then, address the relevant community with it and analyze the feedback. Learn, develop and scale after then. 
+
+As a members of Paralelni Polis community, we were surrounded by several environmental clichés, mostly about the eco-unfriendly cryptocurrency mining. Actually, their substance was similar to many others environmental issues: many debates and only a few practically-based conclusions with very poor impact. So, we decided to take action. We built up our first hydroponic system, start cooperation with hackerspace in order to include automation. And start the path to automated rooftop greenhouse. We also open-sourced all of our know-how in order to make it spread as far as possible. The accurate feedback on the effect of our actions was substantial to us - so we refused state-based financial sources and emphasize the peer-to-peer relation. We will be happy to share our story with you! In the meantime, we don 't waste time and iterate!
+
+AFTER THE TALK you are more than welcomed to join the guided tour - Parallel Garden team will show you hydroponic systems and FarmBot installed in Paralelní Polis and tell you further details.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_travin-keith">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/travin-keith.png" width="300" height="300" alt="Travin Keith" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">The Dehumanizing Process of Immigration Systems</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Travin Keith</span>
+            <br> Cryptocurrency, Freedom, and Open Source Advocate and Former Digital Nomad</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_travin-keith" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Travin Keith">Travin Keith</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/travin-keith.png" width="200" height="200" alt="Travin Keith" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Travin Keith, CTO of Consortio Group, is a former digital nomad who has lived in 8 countries across 4 continents. Since shifting from a primarily digital marketing background in 2016, he has worked in the cryptocurrency space, as a volunteer, such as with the Bitcoin Markets community, a Board Member, with the Nxt Foundation, an advisor and consultant for a wide range of projects, as well as an entrepreneur with his ventures Agavon, Altrean (both now defunct), and Stokr, of which he is a current Advising Co-Founder, to name just a few. He has also contributed significantly to open source projects in and out of the cryptocurrency space, especially with Hyperledger, of which he co-authored the white paper. He has frequently spoken at events ranging from meetups to large conferences across the world, such as the Open Source Leadership Summit in 2018, hosted by the Linux Foundation, mainly around the areas of cryptocurrency and distributed ledger technology.<br><br>During his time as a digital nomad, of which he in some ways still is, he has encountered numerous issues with regards to both relocating and basic travel, personally through his own experiences and 2nd hand through the experiences of many others he encountered. At HCPP 19, he looks forward to discussing these as well as reporting on his research to highlight the dehumanizing issues regarding the current immigration systems around the world.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>The Dehumanizing Process of Immigration Systems</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 13:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      Numerous immigration systems around the world are broken. Though part of the reason is due to illegal immigration, a significant amount remains fixable, but isn't, due to the fact that most citizens of countries are never exposed to the problem, and most legal immigrants, sometimes known as an expat, either prefer to not do anything about it, perhaps out of fear of being mistreated, or are not able to influence change. Because of this, many problems remain that reduce the value of an individual and their own merits to where they were born, something that they have no control over, that cause burdensome processes that stifle business growth and economic freedom, or outright rejection. This presentation will go over relevant data from immigration policies around the world as well as personal experiences from the speaker, a former digital nomad who has traveled to 31 countries and lived in 8 of them, all while holding a passport of a country with a Global Passport Ranking of 133 out of 199 countries.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_joerg-platzer">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/joerg-platzer.jpg" width="300" height="300" alt="Joerg Platzer" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">The inevitable and awful end of the grand Bitcoin experiment</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Joerg Platzer</span>
+            <br> Crypto Economist and trustworthy bartender</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_joerg-platzer" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Joerg Platzer">Joerg Platzer</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/joerg-platzer.jpg" width="200" height="200" alt="Joerg Platzer" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>The inevitable and awful end of the grand Bitcoin experiment</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 19:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_dr-maxim-orlovsky">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/maxim-orlovsky.jpg" width="300" height="300" alt="Dr Maxim Orlovsky" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">A proper path to digital immortality</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Dr Maxim Orlovsky</span>
+            <br> Radical transhumanist; CEO Pandora Core AG</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_dr-maxim-orlovsky" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Dr Maxim Orlovsky">Dr Maxim Orlovsky</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/maxim-orlovsky.jpg" width="200" height="200" alt="Dr Maxim Orlovsky" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Dr Maxim Orlovsky: cross-disciplinary researcher and entrepreneur, merging neuroscience, machine learning and LNP/BP technology to build a foundation for a post-humanity future, where the fruits of most radical progress would not be sacrificed for the sake of "safety" and "greater common good".<br><br>Maxim Orlovsky is a CEO and founder at Pandora Core AG, a Swiss company focusing on building scalable decentralized technology on top of LNP/BP. He and the company are contributors to RGB development and rust-bitcoin project. He is also an author of Prometheus (technology for scalable computing on LNP/BP), Storm (L2/L3 messaging and storage with economic guarantees), Typhon (trustless one-peg sidechains) proposals, co-author of The #FreeAI Manifesto (https://manifesto.ai) and a founder of BICA Labs, working on new cognitive architectures.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>A proper path to digital immortality</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 15:00 - Studio 1</span>
+                    </div>
+                    <p>
+                      Last year my talk was devoted to uncensorable and unregulated artificial intelligence. This year I'd like to give more technical insights into the topic and describe how existing Bitcoin and Lightning Network technologies can be utilized to break the attribution between computing, messaging, storage and ownership — and physical identity of the person. Then, I will disclose why these steps are a required part of the equation that can eventually lead to digital immortality.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal">
+            <figure class="speaker accent-bg"> <img src="/media/images/transparent.png" width="300" height="300" alt="Max Hillebrand" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Time Traveling the Timechain with Scriptless Scrip Atomic UTXO Swaps</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Max Hillebrand</span>
+            <br> Open Source Entrepreneur at Wasabi Wallet, Nodl, Cold Card, World Crypto Network</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_max-hillebrand" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Max Hillebrand">Max Hillebrand</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/images/transparent.png" width="200" height="200" alt="Max Hillebrand" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Time Traveling the Timechain with Scriptless Scrip Atomic UTXO Swaps</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 15:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      The Taproot implementation of the Schnorr signature scheme opens up a whole wide range of privacy protecting tools for Bitcoin transactions. Specifically the adaptor signature tweaks enable scriptless scripts which can be utilized to craft trustlees swaps of UTXOs that are indistinguishable from any other taproot transaction. This breaks the assumption of chain anal spies that "inputs pay outputs" with plausible deniability for anyone utilizing taproot. Max will elaborate on the powerful magic of time traveling the time chain with plausible deniability.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_alexander-isavnin">
+            <figure class="speaker accent-bg"> <img src="/media/images/transparent.png" width="300" height="300" alt="Alexander Isavnin" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">OPT-OUT: Russian consequences</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Alexander Isavnin</span>
+            <br> </p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_alexander-isavnin" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Alexander Isavnin">Alexander Isavnin</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/images/transparent.png" width="200" height="200" alt="Alexander Isavnin" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Worked for years in Russian ISPs being responsible for setting inter-operator relations and communication to law enforcement agencies. Now works with Internet rights protection organizations RosKomSvoboda and Internet Protection Society, conducting technical researches and heading international cooperation.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>OPT-OUT: Russian consequences</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 17:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      After fall of Soviet Union and years of political freedom most Russian people opted out of political life. It appears there are a lot more interesting things to do: travel, develop technologies, create the art, grew up children.
+
+But there were some others, who have not opted out of the race for powers. 
+
+What do we have now in Russia, what about OPT-OUT now?
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_josef-tetek">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/josef-tetek.jpg" width="300" height="300" alt="Josef Tětek" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Bitcoin's Security Budget is Adequate... for now</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Josef Tětek</span>
+            <br> Analyst at TopMonks &amp; DEBNK</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_josef-tetek" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Josef Tětek">Josef Tětek</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/josef-tetek.jpg" width="200" height="200" alt="Josef Tětek" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    I am an analyst interested in all things Bitcoin (and some things Ethereum). I have an economics background (austrian school, founder of Czech Ludwig von Mises Institute) and I like to study the incentive structures and future macroeconomic impacts of non-governmental money.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Bitcoin's Security Budget is Adequate... for now</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 18:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      Towards a theory of adequate mining rewards. While some analysts have tried to derive the appropriate security budget / mining rewards from the future Bitcoin marketcap, I offer a bottom-up approach of looking at the onchain transacted values. We find there is an interesting correlation between how much gets transacted on-chain and how much the miners earn.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_martin-habovstiak">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/martin-habovstiak.jpg" width="300" height="300" alt="Martin Habovštiak" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">UX challenges of the Bitcoin ecosystem</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Martin Habovštiak</span>
+            <br> Voluntaryist, Programmer, Bitcoiner, tech enthusiast</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_martin-habovstiak" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Martin Habovštiak">Martin Habovštiak</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/martin-habovstiak.jpg" width="200" height="200" alt="Martin Habovštiak" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Martin got excited about programming when eleven years old and since then he got also involved into security, cryptography, Bitcoin and voluntaryism. He currently works as a freelancer and is an author of several Bitcoin/Lightning-related applications.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>UX challenges of the Bitcoin ecosystem</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Friday 18:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      In some ways, Bitcoin UX is already better than Internet banking. In other ways, it's much worse. This presentation will describe experiences of visitors of Paralelna Polis Bratislava as well as experience of techies, who tried to use Lightning Network. The talk will also suggest improvements to make opting-out easier and possible for more people.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_michalis-kargakis">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/michalis-kargakis.jpg" width="300" height="300" alt="Michalis Kargakis" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">A view on Grin</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Michalis Kargakis</span>
+            <br> Software engineer by trade, cypherpunk at heart</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_michalis-kargakis" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Michalis Kargakis">Michalis Kargakis</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/michalis-kargakis.jpg" width="200" height="200" alt="Michalis Kargakis" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Michalis has some years of experience in the software industry, mainly as a sofware engineer but also as a public speaker in various tech conferences. He started his journey back in 2014 when he got briefly involved in Bitcoin development, then joined Red Hat for 4 years, working on infrastructure automation, only to jump back to the blockchain industry in the last year for good. He enjoys being part of the cryptocurrency community, and also attends a Masters degree in Digital Currency at the University of Nicosia.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>A view on Grin</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Sunday 13:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      An introduction to Grin, the first public implementation of the Mimblewimble protocol. Grin is a cryptocurrency focused on privacy, scalability, and fairness, with a bottoms-up open community that is welcoming to all kinds of contributions. This talk is going to be an overview of the project. Particularly, I will try to explore how the project fares in what I consider as its core tenets, those of privacy, scalability, and fairness.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_amin-rafiee">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/amin-rafiee.jpg" width="300" height="300" alt="Amin Rafiee" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">The Age of Decentralization: Society 3.0</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Amin Rafiee</span>
+            <br> Advocate of Cryptoanarchy, Decentralization, Privacy and Bottom-up Strategies. Entrepreneur, Consultant, Journalist, Designer &amp; Public Speaker.</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_amin-rafiee" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Amin Rafiee">Amin Rafiee</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/amin-rafiee.jpg" width="200" height="200" alt="Amin Rafiee" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Netexplo UNESCO award winner, Amin Rafiee, a regular speaker at Bitcoin and decentralization conferences throughout Europe, including the UNESCO house in Paris and the European Commission as well as other locations throughout America and Australia. Amin has been helping share the truth, freedom, and choice that Bitcoin and other decentralized systems have to offer since 2013. A digital nomad, bio-hacker, consultant, journalist, designer, advisor and co-founder, always looking to demonstrate the higher possibilities. An advocate of privacy, P2P economies and decentralization in an otherwise centralized world.<br><br>Amin is currently working with the 1M5 project (https://1m5.io). A protocol seeking to provide anonymous uncensored communication by routing messages and communication through Tor, I2P and meshing networks. This protocol is currently being developed to be used by Inkrypt for journalists.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>The Age of Decentralization: Society 3.0</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 17:00 - Slévárna</span>
+                    </div>
+                    <p>
+                      As we draw closer to an era where we are no longer bound by centralized rules dictating how our societies should function, we are in need of tools that can support our journey forward.
+
+Our societies have been built from the top-down. Enforcement branching out with no care about how it would effect the people who must pay dearly for its fruits. We are all capable of assessing our needs, we are all capable of building a world shaped by those who live in it, rather than those who enjoy the privileged seats assigned to them.
+
+Regulations are pushing to create boundaries for us to play in. Like obsessive parents, we are being told to play within the limits of their vision. As though the rules they had assigned us had done us any good thus far. The failure to see and acknowledge this has been the root cause of our perish. We are no longer looking for guidance, we seek something much greater. A sign of hope not built by fortune tellers, but by those who have all of humanity in mind. What tools can we use to "opt-out"? Join me for yet another interactive presentation.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_frank-rieger">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/frank-rieger.jpg" width="300" height="300" alt="Frank Rieger" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Cryptography alone is not enough</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Frank Rieger</span>
+            <br> Hacker, entrepreneur, consultant and author</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_frank-rieger" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Frank Rieger">Frank Rieger</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/frank-rieger.jpg" width="200" height="200" alt="Frank Rieger" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Frank Rieger, is an hacker, entrepreneur, consultant and author. Professionally he has co-founded successful startups in the fields of of mobile navigation, maps, information security and practical cryptography. He works as CTO of a leading supplier of encrypted communication devices and mobile network security systems. He serves as a spokesperson for the german Chaos Computer Club. His texts on the impact of technology on the society, digital freedom rights and privacy as well as the future of work and cyberwar are regularly published in german and international media. Together with Constanze Kurz he has published three german bestseller books on the future of privacy ("Die Datenfresser", S. Fischer 2011), the future of work in a world of machines and artificial intelligence ("Arbeitsfrei", Random House 2013) and "Cyberwar" (C. Bertelsmann, 2018).
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Cryptography alone is not enough</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Sunday 14:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      Cryptocurrency from an attackers perspective means one thing: you can steal data that literally *is* money. A multitude of methods to prevent theft or at least make it harder have been developed over the years – several generations of hardware wallets, paper wallets, various elaborate cold storage systems etc. pp.. 2FA tokens for remote system access and similar devices are very similar in their properties. But they all have one weakness: if an attacker gains physical possession, the security margin shrinks – often too far. Even if an attacker can not reverse engineer the secrets out of access tokens or hardware wallets, he can manipulate the computing devices you use them with, gain valuable information through surveillance or trick you into doing stupid stuff. So the necessary protection envelope is bigger than you may think. This talk will take a look at how real-world attacks against offline and online devices are carried out these days, discuss how to develop an adequate threat model for your needs, explain some basics (like the difference between "tamper evident" and "tamper resistant") as well as typical pitfalls in this game. Finally we will show some new developments that make it easier to achieve better protection in various circumstances.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_kilian-rausch">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/kilian-rausch.jpg" width="300" height="300" alt="Kilian Rausch" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">OpenDEX - A Protocol for Unstoppable P2P Trading</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Kilian Rausch</span>
+            <br> Product Anarchist</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_kilian-rausch" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Kilian Rausch">Kilian Rausch</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/kilian-rausch.jpg" width="200" height="200" alt="Kilian Rausch" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Kilian plays product at Exchange Union, the project bootstrapping OpenDEX, a protocol for unstoppable P2P trading. OpenDEX is built on the Lightning &amp; Raiden Network and brings individuals and exchanges onto the same network to trade instantly and trustlessly. Previously, he was the PO of Mobi at BTCC, the world’s first true global &amp; mobile wallet for everyday people.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>OpenDEX - A Protocol for Unstoppable P2P Trading</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Saturday 18:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      The talk covers architecture design choices, the different layers involved, the p2p messaging layer and discusses scalability. The second part demos a trade of an implementation implementing the OpenDEX protocol, an atomic swap between Bitcoin and DAI, a USD stablecoin via the Lightning and Raiden Network. The last part discusses the transition to a community-driven, open &amp; token free protocol and gives a glimpse into implications for society.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_tomas-marada">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/tomas-marada.jpg" width="300" height="300" alt="Tomáš Marada" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Trustless loan backed by BTC</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Tomáš Marada</span>
+            <br> Mathematician</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_tomas-marada" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Tomáš Marada">Tomáš Marada</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/tomas-marada.jpg" width="200" height="200" alt="Tomáš Marada" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    Tomáš is a mathematician fascinated with new technologies, their exponential growth, and transformative potential to human society. Tomáš is a co-founder of Debnk - decentralized trustless bitcoin backed banking.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Trustless loan backed by BTC</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Sunday 17:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      How loan can be replicated using derivatives, mainly futures and swaps. And how to enter such contracts in p2p fashion. The talk examines current possibilities how to take the loan backed by hodlers BTC and how to construct loan using BTC derivatives, mainly futures and swaps. In the end simple p2p derivative construction will be described.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-8 col-xs-offset-2 col-sm-offset-0 text-center">
+        <!-- Speaker -->
+        <div class="speaker-item">
+          <a href="javascript:void(0)" data-toggle="modal" data-target="#speaker_patrik-tjokorda">
+            <figure class="speaker accent-bg"> <img src="/media/speakers/patrik-tjokorda.jpg" width="300" height="300" alt="Patrik Tjokorda" class="img-responsive center-block">
+              <figcaption>
+                <p class="text-uppercase accent">Bitcoin peer banking</p>
+              </figcaption>
+            </figure>
+          </a>
+          <p><span class="speaker-accent">Patrik Tjokorda</span>
+            <br> Co-founder DEBNK</p>
+        </div>
+        <!-- /.Speaker -->
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="speaker_patrik-tjokorda" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h2 class="modal-title" id="Patrik Tjokorda">Patrik Tjokorda</h2>
+            </div>
+            <div class="modal-body clearfix">
+              <div class="row">
+                <div class="col-xs-12 col-sm-3">
+                  <img src="/media/speakers/patrik-tjokorda.jpg" width="200" height="200" alt="Patrik Tjokorda" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-9">
+                  <p>
+                    From 10 years building payment Fintech companies with 2 exits and MasterCard Award to building trustless peer banking utility for Bitcoin.
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-12">
+                    <h4>Bitcoin peer banking</h4>
+                    <div class="mrgn-10-btm">
+                      <span class="label label-main">Sunday 18:00 - Institute of Cryptoanarchy</span>
+                    </div>
+                    <p>
+                      Bitcoin backed trustless peer banking. What?
+
+Think peers banking peers. Alice the “hodler” going long Bitcoin, Bob the “lender” providing her dollar liquidity for an interest, Charlie “the miner” hedging to dollars, Dave the “financier” balancing demand and supply liquidity and Emily the “trader” speculating on futures, options, FXs or stocks. All just above Bitcoin as the underlying and creating a parallel trustless financial system.
+
+Think DeFi built on top of Bitcoin using Bitcoin multisig tech to get simple reliable smart contracts, using Bitcoin as the only reliable store of value.
+
+Think open source third layer on top of Bitcoin, an accounting layer that can share liquidity and reconcile across on-chain and lightning settlement layers.
+
+From theoretical concepts to real world products and how we can get this done.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   <!-- /.Speakers List -->
   </div>
 
-  <p class="subtitle text-center">Stay tuned for more confirmed speakers</p>
   <div class="container">
     <!-- Speaker CTA Button -->
     <div class="row">
